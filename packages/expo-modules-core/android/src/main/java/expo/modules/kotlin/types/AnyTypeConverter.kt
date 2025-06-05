@@ -20,8 +20,8 @@ class AnyTypeConverter : DynamicAwareTypeConverters<Any>() {
       ReadableType.Boolean -> value.asBoolean()
       ReadableType.Number -> value.asDouble()
       ReadableType.String -> value.asString() ?: throw DynamicCastException("string")
-      ReadableType.Map -> (value.asMap()  ?: throw DynamicCastException("map") ).toHashMap()
-      ReadableType.Array -> (value.asArray()  ?: throw DynamicCastException("array")).toArrayList()
+      ReadableType.Map -> (value.asMap() ?: throw DynamicCastException("map")).toHashMap()
+      ReadableType.Array -> (value.asArray() ?: throw DynamicCastException("array")).toArrayList()
       ReadableType.Null -> throw NullArgumentException()
     }
   }

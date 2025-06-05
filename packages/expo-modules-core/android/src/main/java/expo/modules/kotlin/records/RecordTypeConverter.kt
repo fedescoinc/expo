@@ -5,7 +5,6 @@ import com.facebook.react.bridge.ReadableMap
 import expo.modules.kotlin.AppContext
 import expo.modules.kotlin.allocators.ObjectConstructor
 import expo.modules.kotlin.allocators.ObjectConstructorFactory
-import expo.modules.kotlin.exception.CodedException
 import expo.modules.kotlin.exception.DynamicCastException
 import expo.modules.kotlin.exception.FieldCastException
 import expo.modules.kotlin.exception.FieldRequiredException
