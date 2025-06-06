@@ -17,6 +17,7 @@ export const expoRunIos: Command = async (argv) => {
     '--no-bundler': Boolean,
     '--configuration': String,
     '--binary': String,
+    '--private-key-path': String,
 
     '--port': Number,
 
@@ -47,6 +48,7 @@ export const expoRunIos: Command = async (argv) => {
         `--no-bundler                     Skip starting the Metro bundler`,
         `--scheme [scheme]                Scheme to build`,
         `--binary <path>                  Path to existing .app or .ipa to install.`,
+        chalk`--private-key-path <path>       Path to private key for code signing. {dim Default: "private-key.pem" in the same directory as the certificate specified by the expo-updates configuration in app.json.}`,
         chalk`--configuration <configuration>  Xcode configuration to use. Debug or Release. {dim Default: Debug}`,
         `-d, --device [device]            Device name or UDID to build the app on`,
         chalk`-p, --port <port>                Port to start the Metro bundler on. {dim Default: 8081}`,
