@@ -18,6 +18,7 @@ export const expoRunAndroid: Command = async (argv) => {
     '--variant': String,
     '--binary': String,
     '--app-id': String,
+    '--private-key-path': String,
     // Unstable, temporary fallback to disable active archs only behavior
     // TODO: replace with better fallback option, like free-form passing gradle props
     '--all-arch': Boolean,
@@ -52,6 +53,7 @@ export const expoRunAndroid: Command = async (argv) => {
     --app-id <appId>       Custom Android application ID to launch.
     --variant <name>       Build variant or product flavor and build variant. {dim Default: debug}
     --binary <path>        Path to existing .apk or .aab to install.
+    --private-key-path <path>       Path to private key for code signing. {dim Default: "private-key.pem" in the same directory as the certificate specified by the expo-updates configuration in app.json.
     -d, --device [device]  Device name to run the app on
     -p, --port <port>      Port to start the dev server on. {dim Default: 8081}
     -h, --help             Output usage information
